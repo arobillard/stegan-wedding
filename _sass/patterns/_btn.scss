@@ -12,6 +12,8 @@ button,
   text-transform: uppercase;
   font-weight: bold;
   position: relative;
+  transition:
+    color $transition-quick;
 }
 
 .btn::before,
@@ -22,6 +24,7 @@ button,
   position: absolute;
   // z-index: -1;
   transition:
+    background-color $transition,
     width $transition,
     height $transition;
 }

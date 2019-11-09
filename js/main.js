@@ -10,6 +10,7 @@ const togMiddle = document.querySelector('.menu-tog .tog-middle');
 const togBottom = document.querySelector('.menu-tog .tog-bottom');
 const masthead = document.querySelector('.masthead');
 const navSlider = document.querySelector('.nav-slider');
+const btnRSVPheader = document.querySelector('.masthead .btn');
 
 menuTog.addEventListener('click', function(e) {
   e.preventDefault();
@@ -23,6 +24,7 @@ menuTog.addEventListener('click', function(e) {
     this.classList.remove('open');
     masthead.classList.remove('open');
     navSlider.classList.remove('open');
+    btnRSVPheader.classList.remove('btn-white');
   } else {
     togTop.style.top = '50%';
     togTop.style.transform = 'translateY(-50%)';
@@ -35,6 +37,7 @@ menuTog.addEventListener('click', function(e) {
       togBottom.style.opacity = '0';
       masthead.classList.add('open');
       navSlider.classList.add('open');
+      btnRSVPheader.classList.add('btn-white');
     }, 150);
     this.classList.add('open');
   }

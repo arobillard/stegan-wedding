@@ -36,7 +36,12 @@
       color: #fff;
     }
   }
-  .masthead.open .nav-slide-in {
-    transform: none;
+  .masthead.open {
+    .nav-slide-in {
+      transform: none;
+    }
+    .btn-white {
+      color: #fff;
+    }
   }
 }
