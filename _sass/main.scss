@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700,700i&display=swap');
+@import 'utilities/variables';
+@import 'utilities/mixins';
+@import 'modules/modules';
+@import 'modules/grid';
+@import 'modules/type';
+@import 'modules/colors';
+@import 'modules/layout';
+@import 'styles/type';
+@import 'patterns/btn';
+@import 'patterns/footer';
+@import 'patterns/header';
+@import 'patterns/toggle';
+
+html {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.test {
+  background-color: blue;
+  width: 100px;
+  height: 100px;
+}
+
+.test:hover {
+  animation: test 1s forwards;
+}
+
+@keyframes test {
+
+  0% {
+    width: 100px;
+    height: 100px;
+  }
+
+  50% {
+    width: 200px;
+    height: 100px;
+  }
+
+  100% {
+    width: 200px;
+    height: 200px;
+  }
+
+}

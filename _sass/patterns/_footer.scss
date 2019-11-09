@@ -1,0 +1,27 @@
+.footer {
+  @extend .bg-grey-dark;
+  color: #fff;
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .rsvp-cta {
+    background-color: lighten($color-grey-dark, 5%);
+  }
+  .nav-footer {
+    li:not(:last-child) {
+      margin-bottom: .65rem;
+    }
+  }
+  .sub-footer {
+    background-color: darken($color-grey-dark, 5%);
+    .link-ar {
+      color: #fff;
+      svg {
+        width: 5.78rem;
+        margin-top: -9px;
+        transform: translateY(9px);
+      }
+    }
+  }
+}

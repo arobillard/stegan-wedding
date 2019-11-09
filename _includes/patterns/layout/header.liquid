@@ -1,0 +1,14 @@
+<header class="masthead">
+  <div class="island flex-row flex-row-v-center">
+    {% include patterns/navigation/toggle.liquid class="menu-tog" id="menu-tog" %}
+    {% include patterns/btn/btn.liquid text="RSVP" url="/rsvp/" class="btn-medium push-r-auto" %}
+    <a href="/">
+      {% if page.url == '/' %}<h1 class="push-0 tera">{% endif %}
+        {% include utilities/graphics/logo.liquid class="tera" %}
+      {% if page.url == '/' %}</h1>{% endif %}
+    </a>
+  </div>
+  <div class="nav-slide-in bg-primary">
+    {% include utilities/nav.liquid id="nav" class="nav island tera light text-upper" %}
+  </div>
+</header>

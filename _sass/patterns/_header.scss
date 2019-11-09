@@ -1,0 +1,42 @@
+.masthead {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  // background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, .5), rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
+  a {
+    color: $color-primary;
+    text-decoration: none;
+  }
+  .menu-tog {
+    margin-right: 1.3rem;
+  }
+
+}
+
+@media only screen and (min-width: 38em) {
+
+  .nav-slide-in {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    padding-top: 100px;
+    width: $navWidth;
+    box-shadow: $shadow;
+    transform: translateX(-100%);
+    transition:
+      transform $transition-quick;
+    li:not(:last-child) {
+      margin-bottom: 1.95rem;
+    }
+    a {
+      color: #fff;
+    }
+  }
+  .masthead.open .nav-slide-in {
+    transform: none;
+  }
+}

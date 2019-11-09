@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-ca">
+<head>
+  <meta charset="utf-8">
+  <title>{% if page.title %}{{page.title}} · {% endif %}Stegan Wedding</title>
+  {% if page.description %}<meta name="description" content="{{page.description}}">{% endif %}
+  <meta name="handheldfriendly" content="true">
+  <meta name="mobileoptimized" content="240">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- Geotagging -->
+  <meta name="ICBM" content="45.416667,-75.7">
+  <meta name="geo.position" content="45.416667;-75.7">
+  <meta name="geo.region" content="ca-on">
+  <meta name="geo.placename" content="Ottawa">
+  {% comment %}
+  <!-- Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_CA">
+  <meta property="og:title" content="{% if page.title %}{{page.title}} · {% endif %}Adam Robillard">
+  <meta property="og:url" content="https://adamrobillard.ca">
+  <meta property="og:image" content="https://adamrobillard.ca/images{% if page.url == '/' %}/home-hover.jpg{% else %}{{site.data.case-studies[page.csNumber].previewImg}}{% endif %}">
+  <meta property="og:site_name" content="Adam Robillard">
+  <meta property="og:description" content="{% if page.description %}{{page.description}}{% else %}{{site.data.case-studies[page.csNumber].metaDesc}}{% endif %}">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{% if page.title %}{{page.title}} · {% endif %}Adam Robillard">
+  <meta name="twitter:url" content="https://adamrobillard.ca">
+  <meta name="twitter:description" content="{% if page.description %}{{page.description}}{% else %}{{site.data.case-studies[page.csNumber].metaDesc}}{% endif %}">
+  <meta name="twitter:image" content="https://adamrobillard.ca/images{% if page.url == '/' %}/home-hover.jpg{% else %}{{site.data.case-studies[page.csNumber].previewImg}}{% endif %}">
+  {% endcomment %}
+  <!-- CSS -->
+  <link href="{{site.baseurl}}/css/main.css" rel="stylesheet">
+  <link rel="shortcut icon" href="{{site.baseurl}}/favicon.ico"/>
+</head>
+<body id="top">
+  <ul class="skip-links">
+    <li><a href="#main">Jump to main content</a></li>
+    <li><a href="#nav">Jump to navigation</a></li>
+  </ul>
+  {% include patterns/layout/header.liquid %}
+  <div class="nav-slider">
+    <main id="main" role="main">
+      {{content}}
+    </main>
+    {% include patterns/layout/footer.liquid %}
+  </div>
+  <script src="{{site.baseurl}}/js/main.js"></script>
+  {% comment %}
+  <script type="application/jd+json">
+    {
+      "@context": "https://schema.org",
+      "@id": "#adamrobillard",
+      "@type": "Person",
+      "name": "Adam William Robillard",
+      "jobTitle": "Graphic Designer",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ottawa",
+        "addressRegion": "ON",
+        "addressCountry": "CA",
+        "postalCode": "K2A 1Z3"
+      },
+      "email": "hello@adamrobillard.ca",
+      "tel": "+16133144551",
+      "website": "http://adamrobillard.ca/"
+      "sameAs": [
+        "https://www.facebook.com/arobillard",
+        "https://www.instagram.com/awillrobillard/",
+        "https://www.linkedin.com/in/adam-robillard/",
+        "https://vimeo.com/user71391239",
+        "https://github.com/arobillard",
+      ]
+    }
+  </script>
+  {% endcomment %}
+</body>
+</html>

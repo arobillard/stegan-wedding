@@ -1,0 +1,69 @@
+.toggle {
+  display: flex;
+  width: 2.75rem;
+  height: 2rem;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+%tog {
+  display: inline-block;
+  width: 100%;
+  height: 5px;
+  background-color: $color-primary;
+  position: relative;
+  transition:
+    background-color $transition-quick,
+    top $transition-quick,
+    bottom $transition-quick,
+    transform $transition-quick;
+}
+
+.toggle.open %tog {
+  background-color: #fff;
+}
+
+.tog-top {
+  @extend %tog;
+  top: 0;
+  transform: none;
+}
+
+.tog-middle {
+  @extend %tog;
+  transform: none;
+}
+
+.tog-bottom {
+  @extend %tog;
+  width: 66.6666%;
+  bottom: 0;
+  opacity: 1;
+}
+
+.toggle:hover .tog-top,
+.toggle:focus .tog-top {
+  top: 10%;
+}
+
+.toggle:hover .tog-bottom,
+.toggle:focus .tog-bottom {
+  bottom: 10%;
+}
+
+// Nav Slider Opener
+@media only screen and (min-width: 38em) {
+
+  .nav-slider {
+    margin-left: auto;
+    width: 100vw;
+    transition:
+      width $transition-quick;
+  }
+
+  .nav-slider.open {
+    width: calc(100vw - #{$navWidth});
+  }
+
+
+}

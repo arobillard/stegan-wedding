@@ -1,0 +1,28 @@
+---
+layout: default
+---
+<div class="pad-t-2 pad-b-2">
+  <div class="wrapper gutter pad-t-2 pad-b-2">
+    <div class="max-length-no-center">
+      {% for i in (1..6) %}
+      <h{{i}}>Heading {{i}}</h{{i}}>
+      {% endfor %}
+      <p>Lorem ipsum <a href="#">dolor sit amet</a>, consectetur adipisicing elit. Provident ea modi consectetur autem, reiciendis eos rem. Sed culpa, non illo praesentium odio rerum ex odit nemo similique? Quis, esse saepe.</p>
+    </div>
+    <div class="push flex-row flex-space-between">
+      <div class="push-r">
+        {% include patterns/btn/btn.liquid text="RSVP" %}
+      </div>
+      <div class="push-r">
+        {% include patterns/btn/btn.liquid class="btn-secondary btn-medium" text="RSVP" %}
+      </div>
+      <div class="push-r">
+        {% include patterns/btn/btn.liquid class="btn-tertiary btn-large" text="RSVP" %}
+      </div>
+      <div class="island bg-000">
+        {% include patterns/btn/btn.liquid class="btn-white btn-extra-large" text="RSVP" %}
+      </div>
+    </div>
+  </div>
+
+</div>

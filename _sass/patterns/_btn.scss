@@ -1,0 +1,183 @@
+button,
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  overflow: visible;
+  padding: .3em 1em .336em;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: $color-primary;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  position: relative;
+}
+
+.btn::before,
+.btn::after {
+  content: ' ';
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  // z-index: -1;
+  transition:
+    width $transition,
+    height $transition;
+}
+
+.btn::before {
+  top: 0;
+  right: 0;
+  border-top: 3px solid $color-primary;
+  border-right: 3px solid $color-primary;
+}
+
+.btn::after {
+  bottom: 0;
+  left: 0;
+  border-bottom: 3px solid $color-primary;
+  border-left: 3px solid $color-primary;
+}
+
+.btn:hover::after,
+.btn:focus::after,
+.btn:hover::before,
+.btn:focus::before {
+  width: 100%;
+  height: 100%;
+}
+
+.btn-medium {
+  @extend .mega;
+  &::after,
+  &::before {
+    border-width: 4px;
+  }
+}
+
+.btn-large {
+  @extend .giga;
+  &::after,
+  &::before {
+    border-width: 5px;
+  }
+}
+
+.btn-extra-large {
+  @extend .tera;
+  &::after,
+  &::before {
+    border-width: 6px;
+  }
+}
+
+/* find me */
+
+$btn-color-list: (
+  secondary: $color-secondary,
+  tertiary: $color-tertiary,
+  white: #fff
+);
+
+@each $cName, $cValue in $btn-color-list {
+
+  .btn-#{$cName} {
+    color: #{$cValue};
+  }
+
+  .btn-#{$cName}::before,
+  .btn-#{$cName}::after {
+    border-color: #{$cValue};
+  }
+
+}
+
+// Archived Thomas Code
+
+// /* stylelint-disable no-descending-specificity */
+//
+// button,
+// .btn {
+//   cursor: pointer;
+//   display: inline-block;
+//   margin: 0;
+//   overflow: visible;
+//   padding: .375em .75em .42em;
+//   -webkit-appearance: none;
+//   -moz-appearance: none;
+//   appearance: none;
+//   background-color: #333;
+//   border-radius: 4px;
+//   border: 3px solid #333;
+//   color: #fff;
+//   font: inherit;
+//   text-decoration: none;
+//   text-transform: none;
+// }
+//
+// button::-moz-focus-inner {
+//   border: 0;
+//   padding: 0;
+// }
+//
+// /* stylelint-enable */
+//
+// button:focus,
+// button:hover,
+// .btn:focus,
+// .btn:hover {
+//   background-color: #000;
+//   border-color: #000;
+//   color: #fff;
+// }
+//
+// button[disabled] {
+//   cursor: default;
+// }
+//
+// .btn-light, .btn--light {
+//   background-color: #e2e2e2;
+//   border-color: #e2e2e2;
+//   color: #000;
+// }
+//
+// .btn-light:focus,
+// .btn-light:hover,
+// .btn--light:focus,
+// .btn--light:hover {
+//   background-color: #666;
+//   border-color: #666;
+//   color: #fff;
+// }
+//
+// .btn-ghost,
+// .btn--ghost {
+//   background-color: transparent;
+//   border-color: #333;
+//   color: #000;
+// }
+//
+// .btn-ghost:focus,
+// .btn-ghost:hover,
+// .btn--ghost:focus,
+// .btn--ghost:hover {
+//   background-color: #e2e2e2;
+//   border-color: #000;
+//   color: #000;
+// }
+//
+// .btn-link {
+//   display: inline;
+//   padding: 0;
+//   background-color: transparent;
+//   border-radius: 0;
+//   border: 0;
+//   color: inherit;
+// }
+//
+// .btn-link:focus,
+// .btn-link:hover {
+//   background-color: transparent;
+//   color: inherit;
+// }

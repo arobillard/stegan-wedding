@@ -1,0 +1,16 @@
+<nav id="{{ include.id }}" class="{{ include.class }}">
+  <ul class="list-group push-0">
+    <li>
+      <a class="{% if page.url == '/' %}current{% endif %}" href="/">Home</a>
+    </li>
+    <li>
+      <a class="{% if page.url == '/about' %}current{% endif %}" href="/about">About</a>
+    </li>
+    <li>
+      <a class="{% if page.url == '/venue' %}current{% endif %}" href="/venue">Venue</a>
+    </li>
+    <li>
+      <a class="{% if page.url == '/hotel' %}current{% endif %}" href="/hotel">Hotel</a>
+    </li>
+  </ul>
+</nav>
