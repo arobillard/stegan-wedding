@@ -4,7 +4,6 @@
   top: 0;
   left: 0;
   z-index: 10000;
-  // background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, .5), rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
   a {
     color: $color-primary;
     text-decoration: none;
@@ -12,7 +11,33 @@
   .menu-tog {
     margin-right: 1.3rem;
   }
-
+  .nav-slide-in {
+    a {
+      color: #fff;
+      position: relative;
+      &::after {
+        content: ' ';
+        position: absolute;
+        display: inline-block;
+        left: 0;
+        bottom: -.325rem;
+        width: 0;
+        height: 3px;
+        background-color: #fff;
+        transition:
+          width $transition;
+      }
+      &:hover::after,
+      &:focus::after,
+      &.current::after {
+        width: 50%;
+      }
+      &.current:hover::after,
+      &.current:focus::after {
+        width: 66.6666%;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 38em) {
@@ -24,16 +49,13 @@
     left: 0;
     height: 100vh;
     padding-top: 100px;
-    width: $navWidth;
+    width: $navWidthM;
     box-shadow: $shadow;
     transform: translateX(-100%);
     transition:
       transform $transition-quick;
     li:not(:last-child) {
       margin-bottom: 1.95rem;
-    }
-    a {
-      color: #fff;
     }
   }
   .masthead.open {
@@ -44,4 +66,12 @@
       color: #fff;
     }
   }
+}
+
+@media only screen and (min-width: 60em) {
+
+  .nav-slide-in {
+    width: $navWidthL;
+  }
+
 }

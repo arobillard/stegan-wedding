@@ -4,6 +4,12 @@
   a {
     color: #fff;
     text-decoration: none;
+    transition:
+      opacity $transition;
+    &:not(.btn):hover,
+    &:not(.btn):focus {
+      opacity: .75;
+    }
   }
   .rsvp-cta {
     background-color: lighten($color-grey-dark, 5%);
@@ -16,6 +22,7 @@
   .sub-footer {
     background-color: darken($color-grey-dark, 5%);
     .link-ar {
+      margin-left: 1.3rem;
       color: #fff;
       svg {
         width: 5.78rem;

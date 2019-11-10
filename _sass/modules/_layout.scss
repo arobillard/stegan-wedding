@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .flex-row {
   display: flex;
   flex-wrap: wrap;
@@ -13,4 +17,17 @@
 
 .flex-row-h-end {
   justify-content: flex-end;
+}
+
+.logo {
+  line-height: 1;
+  transition:
+    opacity $transition;
+  &:hover,
+  &:focus {
+    opacity: .75;
+  }
+  span:first-child {
+    margin-right: -.2em;
+  }
 }
