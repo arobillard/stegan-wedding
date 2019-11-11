@@ -4,6 +4,21 @@
   top: 0;
   left: 0;
   z-index: 10000;
+  transition:
+    background-color $transition,
+    box-shadow $transition;
+  &.sticky {
+    background-color: #fff;
+    box-shadow: $shadow;
+  }
+  &.open {
+    .nav-slide-in {
+      transform: none;
+    }
+    .btn-white {
+      color: #fff;
+    }
+  }
   a {
     color: $color-primary;
     text-decoration: none;
@@ -12,6 +27,20 @@
     margin-right: 1.3rem;
   }
   .nav-slide-in {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    padding-top: 100px;
+    width: 100%;
+    box-shadow: $shadow;
+    transform: translateX(-100%);
+    transition:
+      transform $transition-quick;
+    li:not(:last-child) {
+      margin-bottom: 1.95rem;
+    }
     a {
       color: #fff;
       position: relative;
@@ -42,36 +71,20 @@
 
 @media only screen and (min-width: 38em) {
 
-  .nav-slide-in {
-    position: fixed;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    padding-top: 100px;
-    width: $navWidthM;
-    box-shadow: $shadow;
-    transform: translateX(-100%);
-    transition:
-      transform $transition-quick;
-    li:not(:last-child) {
-      margin-bottom: 1.95rem;
-    }
-  }
-  .masthead.open {
+  .masthead {
     .nav-slide-in {
-      transform: none;
-    }
-    .btn-white {
-      color: #fff;
+      width: $navWidthM;
     }
   }
+
 }
 
 @media only screen and (min-width: 60em) {
 
-  .nav-slide-in {
-    width: $navWidthL;
+  .masthead {
+    .nav-slide-in {
+      width: $navWidthL;
+    }
   }
 
 }

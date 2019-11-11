@@ -1,3 +1,7 @@
+html {
+  font-family: Ubuntu, sans-serif;
+}
+
 h1 {
   text-transform: uppercase;
 }
@@ -5,6 +9,18 @@ h1 {
 h2 {
   text-transform: uppercase;
   font-weight: 300;
+  position: relative;
+  padding-bottom: .65rem;
+  margin-bottom: 2.6rem;
+  &::after {
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 5rem;
+    height: .3rem;
+    background-color: $color-primary;
+  }
 }
 
 h4 {
@@ -13,4 +29,13 @@ h4 {
 
 h6 {
   text-transform: uppercase;
+}
+
+a {
+  color: secondary;
+  transition:
+    color $transition,
+    background-color $transition,
+    border-color $transition,
+    opacity $transition;
 }

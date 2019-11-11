@@ -1,7 +1,7 @@
 .toggle {
   display: flex;
-  width: 2.75rem;
-  height: 2rem;
+  width: 2.25rem;
+  height: 1.75rem;
   justify-content: space-between;
   flex-direction: column;
 }
@@ -9,7 +9,7 @@
 %tog {
   display: inline-block;
   width: 100%;
-  height: 5px;
+  height: 4px;
   background-color: $color-primary;
   position: relative;
   transition:
@@ -52,7 +52,17 @@
 }
 
 // Nav Slider Opener
+
 @media only screen and (min-width: 38em) {
+
+  .toggle {
+    width: 2.75rem;
+    height: 2rem;
+  }
+
+  %tog {
+    height: 5px;
+  }
 
   .nav-slider {
     margin-left: auto;

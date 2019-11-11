@@ -1,0 +1,40 @@
+.logo {
+  display: flex;
+  line-height: 1;
+  transition:
+    color $transition,
+    opacity $transition;
+  &:hover,
+  &:focus {
+    opacity: .75;
+  }
+  span {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 25em) {
+
+  .logo {
+    span {
+      display: inline;
+    }
+  }
+
+}
+
+@media only screen and (max-width: 37.999em) {
+
+  .masthead.open .logo {
+    color: #fff;
+  }
+
+}
+
+@media only screen and (min-width: 60em) and (max-width: 80em) {
+
+  .nav-slider.open .footer .logo {
+    flex-direction: column;
+  }
+
+}

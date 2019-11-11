@@ -1,5 +1,14 @@
 html {
   scroll-behavior: smooth;
+  // scroll-snap-type: y proximity;
+}
+
+section[tabindex="0"]:focus {
+  outline: 0;
+}
+
+.snapable {
+  scroll-snap-align: start;
 }
 
 .flex-row {
@@ -17,17 +26,4 @@ html {
 
 .flex-row-h-end {
   justify-content: flex-end;
-}
-
-.logo {
-  line-height: 1;
-  transition:
-    opacity $transition;
-  &:hover,
-  &:focus {
-    opacity: .75;
-  }
-  span:first-child {
-    margin-right: -.2em;
-  }
 }

@@ -1,0 +1,51 @@
+.hero {
+  height: 100vh;
+  position: relative;
+  background-color: #ccc;
+  box-shadow: $shadow;
+  display: flex;
+  align-items: flex-end;
+  .name-addition {
+    text-align: right;
+    line-height: 1;
+    .total {
+      border-top: 5px solid $color-primary;
+      margin-top: .325rem;
+      display: inline-block;
+    }
+  }
+  .countdown {
+    strong span {
+      line-height: 1;
+    }
+  }
+  .scroll-indicator {
+    color: $color-primary;
+    position: absolute;
+    display: inline-block;
+    bottom: 2.6rem;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+    animation: scrollIndicator 3s cubic-bezier(.57,0,.45,.99) infinite;
+    @include hov() {
+      animation-play-state: paused;
+      opacity: .75
+    }
+  }
+}
+
+@keyframes scrollIndicator {
+
+  0% {
+    transform: translateX(-50%) rotate(90deg);
+  }
+
+  50% {
+    transform: translateX(-50%) translateY(100%)rotate(90deg);
+  }
+
+  100% {
+    transform: translateX(-50%) rotate(90deg);
+  }
+
+}

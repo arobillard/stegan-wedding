@@ -10,37 +10,6 @@
 @import 'patterns/btn';
 @import 'patterns/footer';
 @import 'patterns/header';
+@import 'patterns/logo';
 @import 'patterns/toggle';
-
-html {
-  font-family: 'Ubuntu', sans-serif;
-}
-
-.test {
-  background-color: blue;
-  width: 100px;
-  height: 100px;
-}
-
-.test:hover {
-  animation: test 1s forwards;
-}
-
-@keyframes test {
-
-  0% {
-    width: 100px;
-    height: 100px;
-  }
-
-  50% {
-    width: 200px;
-    height: 100px;
-  }
-
-  100% {
-    width: 200px;
-    height: 200px;
-  }
-
-}
+@import 'patterns/banners';
